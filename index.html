@@ -1,149 +1,474 @@
-html lang="de">
-
+<!DOCTYPE html>
+<html lang="de">
 <head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AZN Aesthetic Studio | Beauty Studio Düsseldorf</title>
 
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AZN Aesthetic Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
-body {
-
-    margin: 0;
-
-    font-family: 'Georgia', serif;
-
-    background: #f8f5f2;
-
-    color: #3a2e2a;
-
+:root{
+  --white:#ffffff;
+  --soft:#fbf8f5;
+  --cream:#f6efe9;
+  --brown:#4b3628;
+  --brown-soft:#7a5b45;
+  --gold:#b89a75;
+  --line:#eadfd6;
+  --shadow:0 20px 55px rgba(75,54,40,.09);
 }
 
-section {
+*{box-sizing:border-box}
 
-    padding: 60px 20px;
-
-    text-align: center;
-
+body{
+  margin:0;
+  background:var(--white);
+  color:var(--brown);
+  font-family:'Inter', sans-serif;
+  font-weight:300;
+  line-height:1.7;
 }
 
-h1 {
+a{text-decoration:none;color:inherit}
 
-    font-size: 32px;
-
-    letter-spacing: 2px;
-
+.hero{
+  min-height:92vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:70px 22px;
+  background:
+    radial-gradient(circle at 20% 20%, #f7eee7 0, transparent 30%),
+    linear-gradient(180deg,#fff 0%,#fbf8f5 100%);
+  position:relative;
+  overflow:hidden;
 }
 
-h2 {
-
-    font-weight: 300;
-
-    margin-bottom: 20px;
-
+.hero:after{
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  border:1px solid rgba(184,154,117,.25);
+  border-radius:50%;
+  right:-160px;
+  bottom:-150px;
 }
 
-.card {
-
-    background: white;
-
-    padding: 20px;
-
-    margin: 15px;
-
-    border-radius: 15px;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-
+.logo-mark{
+  width:86px;
+  height:86px;
+  border:1px solid var(--gold);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 24px;
+  font-family:'Cormorant Garamond', serif;
+  font-size:34px;
+  color:var(--brown);
+  background:rgba(255,255,255,.65);
+  box-shadow:var(--shadow);
 }
 
-.btn {
-
-    display: inline-block;
-
-    margin-top: 20px;
-
-    padding: 12px 25px;
-
-    background: #a67c6d;
-
-    color: white;
-
-    text-decoration: none;
-
-    border-radius: 30px;
-
+.hero h1{
+  font-family:'Cormorant Garamond', serif;
+  font-size:clamp(42px,7vw,82px);
+  font-weight:500;
+  margin:0;
+  letter-spacing:1.5px;
 }
 
+.hero .sub{
+  margin:18px auto 34px;
+  max-width:640px;
+  font-size:15px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--brown-soft);
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:14px 28px;
+  border-radius:999px;
+  border:1px solid var(--brown);
+  font-size:13px;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  transition:.35s ease;
+}
+
+.btn.primary{
+  background:var(--brown);
+  color:white;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 30px rgba(75,54,40,.15);
+  background:var(--brown);
+  color:#fff;
+}
+
+.section{
+  max-width:1120px;
+  margin:auto;
+  padding:90px 24px;
+}
+
+.intro{
+  text-align:center;
+  max-width:760px;
+}
+
+.kicker{
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:2.5px;
+  color:var(--gold);
+  margin-bottom:14px;
+}
+
+h2{
+  font-family:'Cormorant Garamond', serif;
+  font-size:clamp(34px,5vw,54px);
+  font-weight:500;
+  line-height:1.1;
+  margin:0 0 22px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+  margin-top:42px;
+}
+
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:34px 28px;
+  min-height:250px;
+  transition:.35s ease;
+  box-shadow:0 0 0 rgba(0,0,0,0);
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:var(--shadow);
+  border-color:rgba(184,154,117,.6);
+}
+
+.card h3{
+  font-family:'Cormorant Garamond', serif;
+  font-size:30px;
+  font-weight:500;
+  margin:0 0 14px;
+}
+
+.card p{
+  margin:0;
+  color:#6d594b;
+  font-size:15px;
+}
+
+.service-list{
+  margin-top:20px;
+  padding:0;
+  list-style:none;
+}
+
+.service-list li{
+  padding:10px 0;
+  border-bottom:1px solid #f0e7df;
+  color:#5e4939;
+}
+
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:52px;
+  align-items:center;
+  background:var(--soft);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.panel{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:34px;
+  padding:44px;
+  box-shadow:var(--shadow);
+}
+
+.quote{
+  font-family:'Cormorant Garamond', serif;
+  font-size:32px;
+  line-height:1.25;
+  color:var(--brown);
+}
+
+.contact-box{
+  text-align:center;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.92),rgba(251,248,245,.95));
+  border:1px solid var(--line);
+  border-radius:36px;
+  padding:52px 24px;
+  box-shadow:var(--shadow);
+}
+
+.contact-info{
+  margin:22px 0 30px;
+  color:#6d594b;
+}
+
+.footer{
+  text-align:center;
+  padding:35px 20px;
+  font-size:13px;
+  color:#8a7667;
+  border-top:1px solid var(--line);
+}
+
+@media(max-width:1050px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:850px){
+  .grid{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr; gap:28px}
+  .section{padding:70px 20px}
+  .panel{padding:32px 24px}
+}
+
+.rating-box{
+  margin:28px auto 0;
+  max-width:520px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:26px 24px;
+  box-shadow:var(--shadow);
+}
+.stars{
+  color:var(--gold);
+  letter-spacing:3px;
+  font-size:20px;
+  margin-bottom:8px;
+}
+.rating-score{
+  font-family:'Cormorant Garamond', serif;
+  font-size:32px;
+  line-height:1;
+  margin-bottom:8px;
+}
+.rating-text{
+  color:#6d594b;
+  font-size:14px;
+}
+.whatsapp-float{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:50;
+  background:#4b3628;
+  color:white;
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:999px;
+  padding:14px 20px;
+  font-size:13px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  box-shadow:0 18px 38px rgba(75,54,40,.25);
+  transition:.35s ease;
+}
+.whatsapp-float:hover{
+  transform:translateY(-4px);
+  background:#7a5b45;
+}
+@media(max-width:600px){
+  .whatsapp-float{
+    left:18px;
+    right:18px;
+    text-align:center;
+  }
+}
+
+.fade-up{
+  opacity:0;
+  transform:translateY(30px);
+  transition:all .8s ease;
+}
+.fade-up.show{
+  opacity:1;
+  transform:translateY(0);
+}
 </style>
-
 </head>
 
 <body>
 
-<section>
+<header class="hero">
+  <div>
+    <div class="logo-mark">AZN</div>
+    <h1>AZN Aesthetic Studio</h1>
+    <p class="sub">Wimpern · Brows · Gesichtsbehandlungen · Make-up in Düsseldorf</p>
+    <div class="buttons">
+      <a class="btn primary" href="https://wa.me/491765689802" target="_blank">Termin per WhatsApp</a>
+      <a class="btn" href="#services">Behandlungen ansehen</a>
+    </div>
+  </div>
+</header>
 
-<h1>AZN Aesthetic Studio</h1>
-
-<p>Natürlich. Elegant. Professionell.</p>
-
-<a class="btn" href="https://wa.me/491765689802">Termin über WhatsApp</a>
-
+<section class="section intro">
+  <div class="kicker">Natürlich. Elegant. Professionell.</div>
+  <h2>Beauty-Behandlungen, die deine natürliche Schönheit unterstreichen.</h2>
+  <p>
+    Im AZN Aesthetic Studio erwartet dich eine ruhige, hochwertige Atmosphäre und eine individuelle Beratung.
+    Jede Behandlung wird sorgfältig auf dich, deinen Stil und deine Wünsche abgestimmt.
+  </p>
 </section>
 
-<section>
+<section class="section" id="services">
+  <div class="kicker">Services</div>
+  <h2>Meine Behandlungen</h2>
 
-<h2>Wimpern & Brows</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Wimpern</h3>
+      <p>Von natürlich bis voluminös – jede Lash-Technik wird passend zu deiner Augenform und deinem Wunschlook gearbeitet.</p>
+      <ul class="service-list">
+        <li>Wimpernverlängerung</li>
+        <li>Alle Techniken & Styles</li>
+        <li>Wimpernlifting inkl. Färben</li>
+      </ul>
+    </div>
 
-<div class="card">Wimpernverlängerung – alle Techniken</div>
+    <div class="card">
+      <h3>Brows</h3>
+      <p>Gepflegte, definierte Augenbrauen für einen frischen und harmonischen Look.</p>
+      <ul class="service-list">
+        <li>Augenbrauenlifting</li>
+        <li>Färben</li>
+        <li>Zupfen & Formen</li>
+      </ul>
+    </div>
 
-<div class="card">Wimpernlifting inkl. Färben</div>
+    <div class="card">
+      <h3>Facials</h3>
+      <p>Professionelle Gesichtsbehandlungen für ein klares, frisches und gepflegtes Hautbild.</p>
+      <ul class="service-list">
+        <li>Klassische Gesichtsreinigung</li>
+        <li>Aqua Facial</li>
+        <li>Dermaplaning</li>
+        <li>Microneedling</li>
+      </ul>
+    </div>
 
-<div class="card">Augenbrauenlifting + Zupfen</div>
-
+    <div class="card">
+      <h3>Make-up</h3>
+      <p>Elegante Make-up-Looks, abgestimmt auf deinen Anlass, deinen Stil und deine natürliche Ausstrahlung.</p>
+      <ul class="service-list">
+        <li>Natural Make-up</li>
+        <li>Soft Glam</li>
+        <li>Event Make-up</li>
+        <li>Individuelle Make-up-Looks</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<section>
-
-<h2>Gesichtsbehandlungen</h2>
-
-<div class="card">Klassische Gesichtsreinigung</div>
-
-<div class="card">Aqua Facial</div>
-
-<div class="card">Dermaplaning</div>
-
-<div class="card">Microneedling</div>
-
-<div class="card">inkl. Massage & Entspannung</div>
-
+<section class="section split">
+  <div>
+    <div class="kicker">Relax & Glow</div>
+    <h2>Gesichtsreinigung mit Wohlfühlmoment.</h2>
+    <p>
+      Bei der Gesichtsreinigung wird deine Haut sanft mit Dampf vorbereitet und gründlich gereinigt.
+      Auf Wunsch kann die Behandlung mit einer entspannenden Kopf-, Gesichts- und Nackenmassage kombiniert werden.
+    </p>
+  </div>
+  <div class="panel">
+    <div class="quote">„Clean beauty, soft results & ein Look, der zu dir passt.“</div>
+  </div>
 </section>
 
-<section>
+<section class="section fade-up">
+  <div class="kicker">Warum AZN</div>
+  <h2>Warum Kundinnen sich für mich entscheiden</h2>
 
-<h2>Make-Up</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Individuell</h3>
+      <p>Jede Behandlung wird genau auf dich, deinen Stil und deine Wünsche abgestimmt.</p>
+    </div>
 
-<div class="card">Soft Glam</div>
+    <div class="card">
+      <h3>Präzise</h3>
+      <p>Saubere, genaue Arbeit für ein hochwertiges und langanhaltendes Ergebnis.</p>
+    </div>
 
-<div class="card">Full Glam</div>
+    <div class="card">
+      <h3>Natürlich</h3>
+      <p>Looks, die deine natürliche Schönheit unterstreichen – nicht überladen wirken.</p>
+    </div>
 
-<div class="card">Individuelle Looks</div>
-
+    <div class="card">
+      <h3>Atmosphäre</h3>
+      <p>Ein ruhiger, entspannter Space, in dem du dich wohlfühlen kannst.</p>
+    </div>
+  </div>
 </section>
 
-<section>
+<section class="section">
+  <div class="contact-box">
+    <div class="kicker">Kontakt</div>
+    <h2>AZN Aesthetic Studio</h2>
+    <div class="contact-info">
+      Elisabethstraße 52a, 40217 Düsseldorf<br>
+      WhatsApp: 0176 5689802
+    </div>
 
-<h2>Kontakt</h2>
+    <div class="rating-box">
+      <div class="stars">★★★★★</div>
+      <div class="rating-score">5,0</div>
+      <div class="rating-text">Google Bewertung · 3 Rezensionen</div>
+    </div>
 
-<p>Elisabethstraße 52a<br>Düsseldorf</p>
-
-<a class="btn" href="https://wa.me/491765689802">Jetzt schreiben</a>
-
+    <div class="buttons" style="margin-top:30px;">
+      <a class="btn primary" href="https://wa.me/491765689802" target="_blank">WhatsApp schreiben</a>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Kirchpl.%2052%20A%2040217%20D%C3%BCsseldorf" target="_blank">Route öffnen</a>
+    </div>
+  </div>
 </section>
+
+<a class="whatsapp-float" href="https://wa.me/491765689802" target="_blank">WhatsApp schreiben</a>
+
+<div class="footer">
+  © AZN Aesthetic Studio · Beauty & Make-up Studio Düsseldorf
+</div>
+
+<script>
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+document.querySelectorAll(".fade-up").forEach(el=>observer.observe(el));
+</script>
 
 </body>
-
 </html>
